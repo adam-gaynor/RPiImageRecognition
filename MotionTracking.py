@@ -33,8 +33,6 @@ motionCounter = 0
 for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
     #  Take the raw NumPy array representing the image and Movement/No Movement text
     image = frame.array
-    text = "No Movement Detected"
-
     #  Resize the frame, convert it to grayscale, and blur it for easier processing
     image = imutils.resize(image, width = 500)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
